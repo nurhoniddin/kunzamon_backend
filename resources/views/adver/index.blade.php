@@ -50,9 +50,13 @@
                                     @foreach($ad as $ads)
                                         <tr>
                                             <td>{{ $ads->id }}</td>
+                                            <td>{{ $ads->youtube_link_uz }}</td>
+                                            <td>{{ $ads->video_uz }}</td>
 
                                             <td style="font-size: 20px">
-                                                <form action="{{ route('ads.destroy',$ads->id) }}" method="post">
+                                                <form action="{{ route('ads.destroy',$ads->id) }}" method="post" enctype="multipart/form-data">
+                                                    @csrf
+                                                    @method('DELETE')
                                                     <a href="{{ route('ads.edit',$ads->id) }}"><i
                                                                 class="fa fa-pen-square"></i></a>
 {{--                                                    <a href="{{ route('event.show',$ads->id) }}"><i--}}

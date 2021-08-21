@@ -58,8 +58,9 @@ Route::group(['middleware' => 'auth'],function (){
     Route::get('index',[\App\Http\Controllers\AdsController::class,'index'])->name('ads.index');
     Route::get('create',[\App\Http\Controllers\AdsController::class,'create'])->name('ads.create');
     Route::get('edit/{id}',[\App\Http\Controllers\AdsController::class,'edit'])->name('ads.edit');
-    Route::post('update',[\App\Http\Controllers\AdsController::class,'update'])->name('ads.update');
+    Route::patch('update',[\App\Http\Controllers\AdsController::class,'update'])->name('ads.update');
     Route::post('store',[\App\Http\Controllers\AdsController::class,'store'])->name('ads.store');
+    Route::delete('destroy/{id}',[\App\Http\Controllers\AdsController::class,'destroy'])->name('ads.destroy');
 
 });
 

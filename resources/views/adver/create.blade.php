@@ -30,7 +30,7 @@
                                             class="fa fa-arrow-alt-circle-left "></i></a>
                             </div>
                             <form action="{{ route('ads.store') }}" method="post" enctype="multipart/form-data">
-                            @csr    f
+                            @csrf
                             <!-- /.card-header -->
                                 <div class="card-body">
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -56,53 +56,69 @@
                                         </li>
                                     </ul>
                                     <hr>
-                                    <select class="form-select form-control text-uppercase" aria-label="Default select example">
-                                        <option  selected>Sahifani Tanlang</option>
-                                        <option value="1">Bosh Sahifa</option>
-                                        <option value="2">Alohida Maqola</option>
-                                        <option value="3">Kategoriya</option>
-                                    </select>
+                                    <label for="checkbox" class="form-group text-uppercase"> Sahifaga junatish
+                                        <div class="form-check text-uppercase">
+                                            <input class="form-check-input" type="checkbox" value="1" name="home" >
+                                            <label class="form-check-label" for="flexCheckIndeterminate">
+                                                Bosh sahifa
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check text-uppercase">
+                                            <input class="form-check-input" type="checkbox" value="1" name="detail" >
+                                            <label class="form-check-label" for="flexCheckIndeterminate">
+                                                Alohida
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check text-uppercase">
+                                            <input class="form-check-input" type="checkbox" value="1" name="category" >
+                                            <label class="form-check-label" for="flexCheckIndeterminate">
+                                                Kategoriya
+                                            </label>
+                                        </div>
+                                    </label>
                                     <hr>
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="uz" role="tabpanel"
                                              aria-labelledby="uz">
                                             <label class="text-uppercase" for="title_uz">youtube link</label>
-                                            <input type="text" name="youtube_link_uz"  class="form-control" required>
+                                            <input type="text" name="youtube_link_uz"  class="form-control" >
                                             <hr>
 
                                             <label class="text-uppercase" for="title_uz">video yuklash (min 1mb - max 5m)</label>
-                                            <input type="file" name="video_uz"  class="form-control" required>
+                                            <input type="file" name="video_uz"  class="form-control" >
                                             <hr>
 
                                         </div>
                                         <div class="tab-pane fade" id="kiril" role="tabpanel"
                                              aria-labelledby="kiril">
                                             <label class="text-uppercase" for="title_uz">youtube link</label>
-                                            <input type="text" name="youtube_link_cyril"  class="form-control" required>
+                                            <input type="text" name="youtube_link_cyril"  class="form-control" >
                                             <hr>
 
                                             <label class="text-uppercase" for="title_uz">video yuklash (min 1mb - max 5m)</label>
-                                            <input type="file" name="video_cyril"  class="form-control" required>
+                                            <input type="file" name="video_cyril"  class="form-control" >
                                             <hr>
                                         </div>
                                         <div class="tab-pane fade" id="ru" role="tabpanel"
                                              aria-labelledby="ru">
                                             <label class="text-uppercase" for="title_uz">youtube link</label>
-                                            <input type="text" name="youtube_link_ru"  class="form-control" required>
+                                            <input type="text" name="youtube_link_ru"  class="form-control" >
                                             <hr>
 
                                             <label class="text-uppercase" for="title_uz">video yuklash (min 1mb - max 5m)</label>
-                                            <input type="file" name="video_ru"  class="form-control" required>
+                                            <input type="file" name="video_ru"  class="form-control" >
                                             <hr>
                                         </div>
                                         <div class="tab-pane fade" id="en" role="tabpanel"
                                              aria-labelledby="en">
                                             <label class="text-uppercase" for="title_uz">youtube link</label>
-                                            <input type="text" name="youtube_link_en"  class="form-control" required>
+                                            <input type="text" name="youtube_link_en"  class="form-control" >
                                             <hr>
 
                                             <label class="text-uppercase" for="title_uz">video yuklash (min 1mb - max 5m)</label>
-                                            <input type="file" name="video_en"  class="form-control" required>
+                                            <input type="file" name="video_en"  class="form-control" >
                                             <hr>
                                         </div>
                                     </div>
