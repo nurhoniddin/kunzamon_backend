@@ -115,6 +115,15 @@
                             </p>
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('ads.index') }}" class="nav-link">
+                            <i class="nav-icon far fa fa-tv"></i>
+                            <p>
+                                Reklama & Rolik
+                            </p>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="{{ route('notification.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-address-card "></i>

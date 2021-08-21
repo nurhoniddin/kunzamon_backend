@@ -44,6 +44,7 @@ Route::group(['middleware' => 'auth'],function (){
     Route::resource('calendar',CalendarController::class);
     Route::resource('word',WordController::class);
 
+
     // Route Category  List
     Route::get('videocat', [App\Http\Controllers\VideocatController::class, 'index'])->name('videocat.index');
     Route::get('videocat/create', [App\Http\Controllers\VideocatController::class, 'create'])->name('videocat.create');
@@ -52,6 +53,14 @@ Route::group(['middleware' => 'auth'],function (){
     Route::patch('videocat/update/{id}', [App\Http\Controllers\VideocatController::class, 'update'])->name('videocat.update');
     Route::delete('videocat/destroy/{id}', [App\Http\Controllers\VideocatController::class, 'destroy'])->name('videocat.destroy');
     Route::get('videocat/show/{id}', [App\Http\Controllers\VideocatController::class, 'show'])->name('videocat.show');
+
+    //route ads and video
+    Route::get('index',[\App\Http\Controllers\AdsController::class,'index'])->name('ads.index');
+    Route::get('create',[\App\Http\Controllers\AdsController::class,'create'])->name('ads.create');
+    Route::get('edit/{id}',[\App\Http\Controllers\AdsController::class,'edit'])->name('ads.edit');
+    Route::post('update',[\App\Http\Controllers\AdsController::class,'update'])->name('ads.update');
+    Route::post('store',[\App\Http\Controllers\AdsController::class,'store'])->name('ads.store');
+
 });
 
 
