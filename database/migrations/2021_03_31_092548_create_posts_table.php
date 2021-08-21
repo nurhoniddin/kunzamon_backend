@@ -27,7 +27,15 @@ class CreatePostsTable extends Migration
             $table->text('body_cyril')->nullable();
             $table->text('body_ru')->nullable();
             $table->text('body_en')->nullable();
-            $table->string('image');
+            $table->text('youtube_link_uz')->nullable();
+            $table->text('youtube_link_cyril')->nullable();
+            $table->text('youtube_link_ru')->nullable();
+            $table->text('youtube_link_en')->nullable();
+            $table->longText('video_uz')->nullable();
+            $table->longText('video_cyril')->nullable();
+            $table->longText('video_ru')->nullable();
+            $table->longText('video_en')->nullable();
+            $table->text('image');
             $table->foreignId('category_id')->constrained('categories');
             $table->integer('views_count')->default(0);
             $table->timestamps();

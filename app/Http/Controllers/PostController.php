@@ -35,12 +35,11 @@ class PostController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
         $data = new Post();
-
         $data->title_uz = $request->input('title_uz');
         $data->title_cyril = $request->input('title_cyril');
         $data->title_ru = $request->input('title_ru');
@@ -53,17 +52,48 @@ class PostController extends Controller
         $data->body_cyril = $request->input('body_cyril');
         $data->body_ru = $request->input('body_ru');
         $data->body_en = $request->input('body_en');
+        $data->youtube_link_uz = $request->input('youtube_link_uz');
+        $data->youtube_link_cyril = $request->input('youtube_link_cyril');
+        $data->youtube_link_ru = $request->input('youtube_link_ru');
+        $data->youtube_link_en = $request->input('youtube_link_en');
         $data->category_id = $request->input('category_id');
-
         // $data->image  = $request->input('image');
-        $imagePath = request('image')->store('news', 'public');
+
+        if($request->hasFile('image')){
+            $imagePath = $request->file('image')->store('news', 'public');
+            $data->image = $imagePath;
+        }
+
+            if($request->hasFile('video_uz')){
+                $videouz = request('video_uz')->store('video_uz','public');
+                $data->video_uz = $videouz;
+            }
+
+        if($request->hasFile('video_cyril')){
+            $videocyril = request('video_cyril')->store('video_cyril','public');
+            $data->video_cyril = $videocyril;
+        }
+
+        if($request->hasFile('video_ru'))
+        {
+            $videoru = request('video_ru')->store('video_ru','public');
+            $data->video_ru = $videoru;
+        }
+
+        if($request->hasFile('video_en')){
+            $videoen = request('video_en')->store('video_en','public');
+            $data->video_en = $videoen;
+        }
+
+
         // $img = Image::make(public_path("storage/{$imagePath}"))->fit(2200,850);
         // $img->save();
 
+
         // $image= new FileUpload();
-        $data->image = $imagePath;
 
         $data->save();
+//        dd($data);
 
         return redirect()->route('posts.index')
             ->with('success', 'Yangilik yaratildi');
@@ -97,7 +127,7 @@ class PostController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param \App\Models\Post $post
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, $id)
     {
@@ -123,7 +153,38 @@ class PostController extends Controller
         $post->body_cyril = $request->input('body_cyril');
         $post->body_ru = $request->input('body_ru');
         $post->body_en = $request->input('body_en');
+        $post->youtube_link_uz = $request->input('youtube_link_uz');
+        $post->youtube_link_cyril = $request->input('youtube_link_cyril');
+        $post->youtube_link_ru = $request->input('youtube_link_ru');
+        $post->youtube_link_en = $request->input('youtube_link_en');
         $post->category_id = $request->input('category_id');
+        // $data->image  = $request->input('image');
+        if($request->hasFile('image')){
+            $imagePath = $request->file('image')->store('news', 'public');
+            $data->image = $imagePath;
+        }
+
+        if($request->hasFile('video_uz')){
+            $videouz = request('video_uz')->store('video_uz','public');
+            $post->video_uz = $videouz;
+        }
+
+        if($request->hasFile('video_cyril')){
+            $videocyril = request('video_cyril')->store('video_cyril','public');
+            $post->video_cyril = $videocyril;
+        }
+
+        if($request->hasFile('video_ru'))
+        {
+            $videoru = request('video_ru')->store('video_ru','public');
+            $post->video_ru = $videoru;
+        }
+
+        if($request->hasFile('video_en')){
+            $videoen = request('video_en')->store('video_en','public');
+            $post->video_en = $videoen;
+        }
+
         $post->save();
 //        dd($post);
 
@@ -136,11 +197,15 @@ class PostController extends Controller
      * Remove the specified resource from storage.
      *
      * @param \App\Models\Post $post
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Post $post)
     {
         Storage::disk('public')->delete($post->image);
+        Storage::disk('public')->delete($post->video_uz);
+        Storage::disk('public')->delete($post->video_cyril);
+        Storage::disk('public')->delete($post->video_ru);
+        Storage::disk('public')->delete($post->video_en);
         $post->delete();
         return back()->with('error', 'Yangilik O`chirildi');
     }
