@@ -43,6 +43,15 @@ Route::group(['middleware' => 'auth'],function (){
     Route::resource('management',\App\Http\Controllers\ManagementController::class);
     Route::resource('calendar',CalendarController::class);
     Route::resource('word',WordController::class);
+
+    // Route Category  List
+    Route::get('videocat', [App\Http\Controllers\VideocatController::class, 'index'])->name('videocat.index');
+    Route::get('videocat/create', [App\Http\Controllers\VideocatController::class, 'create'])->name('videocat.create');
+    Route::get('videocat/edit/{id}', [App\Http\Controllers\VideocatController::class, 'edit'])->name('videocat.edit');
+    Route::post('videocat/store', [App\Http\Controllers\VideocatController::class, 'store'])->name('videocat.store');
+    Route::patch('videocat/update/{id}', [App\Http\Controllers\VideocatController::class, 'update'])->name('videocat.update');
+    Route::delete('videocat/destroy/{id}', [App\Http\Controllers\VideocatController::class, 'destroy'])->name('videocat.destroy');
+    Route::get('videocat/show/{id}', [App\Http\Controllers\VideocatController::class, 'show'])->name('videocat.show');
 });
 
 

@@ -91,7 +91,7 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                   <!--  <li class="nav-item">
                         <a href="{{ route('gcategory.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-list"></i>
                             <p>
@@ -106,7 +106,7 @@
                                 Gallery
                             </p>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a href="{{ route('event.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-calendar"></i>
@@ -120,6 +120,14 @@
                             <i class="nav-icon far fa fa-address-card "></i>
                             <p>
                                 E'lonlar
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('videocat.index') }}" class="nav-link">
+                            <i class="nav-icon far fa fa-list-ol"></i>
+                            <p>
+                                Video kategory
                             </p>
                         </a>
                     </li>
