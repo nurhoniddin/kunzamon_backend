@@ -100,14 +100,14 @@
                             </p>
                         </a>
                     </li> -->
-                    <li class="nav-item">
+                   <!--  <li class="nav-item">
                         <a href="{{ route('event.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-calendar"></i>
                             <p>
                                 Tadbirlar
                             </p>
                         </a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                         <a href="{{ route('ads.index') }}" class="nav-link">
@@ -117,14 +117,14 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="{{ route('notification.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-address-card "></i>
                             <p>
                                 E'lonlar
                             </p>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a href="{{ route('videocat.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-list-ol"></i>
@@ -159,7 +159,7 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="{{ route('calendar.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-calendar "></i>
                             <p>
@@ -167,8 +167,8 @@
 
                             </p>
                         </a>
-                    </li>
-                    <li class="nav-item">
+                    </li> -->
+                   <!--  <li class="nav-item">
                         <a href="{{ route('word.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-newspaper "></i>
                             <p>
@@ -176,7 +176,7 @@
 
                             </p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
