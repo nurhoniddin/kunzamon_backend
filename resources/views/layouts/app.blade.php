@@ -83,14 +83,7 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('videos.index') }}" class="nav-link">
-                            <i class="nav-icon far fa fa-video"></i>
-                            <p>
-                                Videos
-                            </p>
-                        </a>
-                    </li>
+                  
                    <!--  <li class="nav-item">
                         <a href="{{ route('gcategory.index') }}" class="nav-link">
                             <i class="nav-icon far fa fa-list"></i>
@@ -137,6 +130,14 @@
                             <i class="nav-icon far fa fa-list-ol"></i>
                             <p>
                                 Video kategory
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('videos.index') }}" class="nav-link">
+                            <i class="nav-icon far fa fa-video"></i>
+                            <p>
+                                Videos
                             </p>
                         </a>
                     </li>

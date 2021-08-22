@@ -33,7 +33,6 @@ Route::group(['middleware' => 'auth'],function (){
     Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('category',CategoryController::class);
     Route::resource('posts',PostController::class);
-    Route::resource('videos',VideoController::class);
     Route::resource('gcategory',GcategoryController::class);
     Route::resource('gallery',GalleryController::class);
     Route::post('ckeditor/image_upload', CKEditorController::class)->name('upload');
@@ -44,14 +43,19 @@ Route::group(['middleware' => 'auth'],function (){
     Route::resource('calendar',CalendarController::class);
     Route::resource('word',WordController::class);
 
+<<<<<<< Updated upstream
 
     // Route Category  List
+=======
+    // Route Video Category  List
+>>>>>>> Stashed changes
     Route::get('videocat', [App\Http\Controllers\VideocatController::class, 'index'])->name('videocat.index');
     Route::get('videocat/create', [App\Http\Controllers\VideocatController::class, 'create'])->name('videocat.create');
     Route::get('videocat/edit/{id}', [App\Http\Controllers\VideocatController::class, 'edit'])->name('videocat.edit');
     Route::post('videocat/store', [App\Http\Controllers\VideocatController::class, 'store'])->name('videocat.store');
     Route::patch('videocat/update/{id}', [App\Http\Controllers\VideocatController::class, 'update'])->name('videocat.update');
     Route::delete('videocat/destroy/{id}', [App\Http\Controllers\VideocatController::class, 'destroy'])->name('videocat.destroy');
+<<<<<<< Updated upstream
     Route::get('videocat/show/{id}', [App\Http\Controllers\VideocatController::class, 'show'])->name('videocat.show');
 
     //route ads and video
@@ -61,6 +65,16 @@ Route::group(['middleware' => 'auth'],function (){
     Route::patch('update',[\App\Http\Controllers\AdsController::class,'update'])->name('ads.update');
     Route::post('store',[\App\Http\Controllers\AdsController::class,'store'])->name('ads.store');
     Route::delete('destroy/{id}',[\App\Http\Controllers\AdsController::class,'destroy'])->name('ads.destroy');
+=======
+
+    // Route Video  List
+    Route::get('videos', [App\Http\Controllers\VideoController::class, 'index'])->name('videos.index');
+    Route::get('videos/create', [App\Http\Controllers\VideoController::class, 'create'])->name('videos.create');
+    Route::get('videos/edit/{id}', [App\Http\Controllers\VideoController::class, 'edit'])->name('videos.edit');
+    Route::post('videos/store', [App\Http\Controllers\VideoController::class, 'store'])->name('videos.store');
+    Route::patch('videos/update/{id}', [App\Http\Controllers\VideoController::class, 'update'])->name('videos.update');
+    Route::delete('videos/destroy/{id}', [App\Http\Controllers\VideoController::class, 'destroy'])->name('videos.destroy');
+>>>>>>> Stashed changes
 
 });
 

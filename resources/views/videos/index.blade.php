@@ -40,6 +40,7 @@
                                     <thead>
                                     <tr>
                                         <th style="width: 10px">#</th>
+                                        <th>image </th>
                                         <th>Video nomi </th>
                                         <th>Video link</th>
                                         <th style="width: 100px">Action</th>
@@ -49,8 +50,11 @@
                                     @foreach($videos as $video)
                                         <tr>
                                             <td>{{ $video->id }}</td>
+                                            <td>
+                                                  <img src="{{ Storage::url($video->image) }}" style="width: 150px">
+                                            </td>
                                             <td>{{ $video->title_uz }}</td>
-                                            <td>{{ $video->video_link }}</td>
+                                            <td>{{ $video->video_link_uz }}</td>
                                             <td style="font-size: 20px">
                                                 <form action="{{ route('videos.destroy',$video->id) }}" method="post">
                                                     <a href="{{ route('videos.edit',$video->id) }}"><i class="fa fa-pen-square"></i></a>
