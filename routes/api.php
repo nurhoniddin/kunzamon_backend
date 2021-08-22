@@ -34,9 +34,9 @@ Route::get('/event/{id}', [\App\Http\Controllers\Api\EventController::class,'sin
 Route::get('/staff', [\App\Http\Controllers\Api\StaffController::class,'index'])->name('staff');
 
 // Route Video  All  // Video yangiliklar
-Route::get('/videos', [\App\Http\Controllers\Api\VideoController::class,'index'])->name('video');
+Route::get('/videos', [\App\Http\Controllers\Api\VideoController::class,'index'])->name('videos');
 //single video
-Route::get('/video/{id}', [\App\Http\Controllers\Api\VideoController::class,'video'])->name('single');
+Route::get('/video/{id}', [\App\Http\Controllers\Api\VideoController::class,'video'])->name('video');
 
 
 // Route Gallery  All // Gallery barchasi

@@ -12,6 +12,7 @@ class VideoController extends Controller
         $video = Video::orderBy('id','DESC')->get();
         return response()->json(compact('video'));
     }
+    
     public function video($id)
     {
         $details = Video::where('videocat_id',$id)->get();
