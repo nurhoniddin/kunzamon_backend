@@ -15,7 +15,7 @@ class CreateVideosTable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->integer('videocat_id')->nullable();
+            $table->foreignId('videocat_id')->constrained('videocats')->onDelete('cascade');
             $table->string('image')->nullable();
             $table->string('title_uz')->nullable();
             $table->string('title_cyril')->nullable();

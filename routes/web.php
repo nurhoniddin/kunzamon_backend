@@ -56,12 +56,12 @@ Route::group(['middleware' => 'auth'],function (){
     Route::get('videocat/show/{id}', [App\Http\Controllers\VideocatController::class, 'show'])->name('videocat.show');
 
     //route ads and video
-    Route::get('index',[\App\Http\Controllers\AdsController::class,'index'])->name('ads.index');
-    Route::get('create',[\App\Http\Controllers\AdsController::class,'create'])->name('ads.create');
-    Route::get('edit/{id}',[\App\Http\Controllers\AdsController::class,'edit'])->name('ads.edit');
-    Route::patch('update',[\App\Http\Controllers\AdsController::class,'update'])->name('ads.update');
-    Route::post('store',[\App\Http\Controllers\AdsController::class,'store'])->name('ads.store');
-    Route::delete('destroy/{id}',[\App\Http\Controllers\AdsController::class,'destroy'])->name('ads.destroy');
+    Route::get('ads/index',[\App\Http\Controllers\AdsController::class,'index'])->name('ads.index');
+    Route::get('ads/create',[\App\Http\Controllers\AdsController::class,'create'])->name('ads.create');
+    Route::get('ads/edit/{id}',[\App\Http\Controllers\AdsController::class,'edit'])->name('ads.edit');
+    Route::patch('ads/update/{id}',[\App\Http\Controllers\AdsController::class,'update'])->name('ads.update');
+    Route::post('ads/store',[\App\Http\Controllers\AdsController::class,'store'])->name('ads.store');
+    Route::delete('ads/destroy/{id}',[\App\Http\Controllers\AdsController::class,'destroy'])->name('ads.destroy');
 
 
     // Route Video  List
@@ -71,6 +71,8 @@ Route::group(['middleware' => 'auth'],function (){
     Route::post('videos/store', [App\Http\Controllers\VideoController::class, 'store'])->name('videos.store');
     Route::patch('videos/update/{id}', [App\Http\Controllers\VideoController::class, 'update'])->name('videos.update');
     Route::delete('videos/destroy/{id}', [App\Http\Controllers\VideoController::class, 'destroy'])->name('videos.destroy');
+
+
 
 
 });

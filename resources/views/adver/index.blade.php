@@ -42,7 +42,7 @@
                                     <tr class="text-uppercase">
                                         <th style="width: 10px">#</th>
                                         <th>youtube_link_uz</th>
-                                        <th>video_uz</th>
+                                        <th>RASM</th>
                                         <th style="width: 150px">Action</th>
                                     </tr>
                                     </thead>
@@ -50,8 +50,8 @@
                                     @foreach($ad as $ads)
                                         <tr>
                                             <td>{{ $ads->id }}</td>
-                                            <td>{{ $ads->youtube_link_uz }}</td>
-                                            <td>{{ $ads->video_uz }}</td>
+                                            <td>{{ $ads->content_uz }}</td>
+                                            <td><img height="140px" src="{{ Storage::url($ads->image) }}" alt=""></td>
 
                                             <td style="font-size: 20px">
                                                 <form action="{{ route('ads.destroy',$ads->id) }}" method="post" enctype="multipart/form-data">

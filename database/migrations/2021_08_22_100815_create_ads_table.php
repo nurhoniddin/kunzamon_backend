@@ -23,6 +23,11 @@ class CreateAdsTable extends Migration
             $table->longText('video_cyril')->nullable();
             $table->longText('video_ru')->nullable();
             $table->longText('video_en')->nullable();
+            $table->longText('image')->nullable();
+            $table->longText('content_uz')->nullable();
+            $table->longText('content_cyril')->nullable();
+            $table->longText('content_ru')->nullable();
+            $table->longText('content_en')->nullable();
             $table->string('home')->nullable();
             $table->string('detail')->nullable();
             $table->string('category')->nullable();

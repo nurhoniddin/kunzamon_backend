@@ -16,4 +16,7 @@ class Video extends Model
         'title_en',
         'video_link'
     ];
+    public function category(){
+        $this->belongsTo(Videocat::class,'videocat_id');
+    }
 }

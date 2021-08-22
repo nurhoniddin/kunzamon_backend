@@ -82,12 +82,22 @@
                                     <div class="tab-content" id="pills-tabContent">
                                         <div class="tab-pane fade show active" id="uz" role="tabpanel"
                                              aria-labelledby="uz">
+                                            <label class="text-uppercase" for="title_uz">Rasm</label>
+                                            <input type="file" name="image"  class="form-control" >
+                                            <hr>
+
                                             <label class="text-uppercase" for="title_uz">youtube link</label>
                                             <input type="text" name="youtube_link_uz"  class="form-control" >
                                             <hr>
 
                                             <label class="text-uppercase" for="title_uz">video yuklash (min 1mb - max 5m)</label>
                                             <input type="file" name="video_uz"  class="form-control" >
+                                            <hr>
+
+                                            <label class="text-uppercase" for="content_uz">Matn</label>
+                                            <textarea class="form-control" name="content_uz" id="" cols="30" rows="10">
+
+                                            </textarea>
                                             <hr>
 
                                         </div>
@@ -100,6 +110,11 @@
                                             <label class="text-uppercase" for="title_uz">video yuklash (min 1mb - max 5m)</label>
                                             <input type="file" name="video_cyril"  class="form-control" >
                                             <hr>
+                                            <label class="text-uppercase" for="content_uz">Matn</label>
+                                            <textarea class="form-control" name="content_cyril" id="" cols="30" rows="10">
+
+                                            </textarea>
+                                            <hr>
                                         </div>
                                         <div class="tab-pane fade" id="ru" role="tabpanel"
                                              aria-labelledby="ru">
@@ -107,8 +122,14 @@
                                             <input type="text" name="youtube_link_ru"  class="form-control" >
                                             <hr>
 
+
                                             <label class="text-uppercase" for="title_uz">video yuklash (min 1mb - max 5m)</label>
                                             <input type="file" name="video_ru"  class="form-control" >
+                                            <hr>
+                                            <label class="text-uppercase" for="content_uz">Matn</label>
+                                            <textarea class="form-control" name="content_ru" id="" cols="30" rows="10">
+
+                                            </textarea>
                                             <hr>
                                         </div>
                                         <div class="tab-pane fade" id="en" role="tabpanel"
@@ -119,6 +140,11 @@
 
                                             <label class="text-uppercase" for="title_uz">video yuklash (min 1mb - max 5m)</label>
                                             <input type="file" name="video_en"  class="form-control" >
+                                            <hr>
+                                            <label class="text-uppercase" for="content_uz">Matn</label>
+                                            <textarea class="form-control" name="content_en" id="" cols="30" rows="10">
+
+                                            </textarea>
                                             <hr>
                                         </div>
                                     </div>

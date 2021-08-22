@@ -34,7 +34,10 @@ Route::get('/event/{id}', [\App\Http\Controllers\Api\EventController::class,'sin
 Route::get('/staff', [\App\Http\Controllers\Api\StaffController::class,'index'])->name('staff');
 
 // Route Video  All  // Video yangiliklar
-Route::get('/video', [\App\Http\Controllers\Api\VideoController::class,'index'])->name('video');
+Route::get('/videos', [\App\Http\Controllers\Api\VideoController::class,'index'])->name('video');
+//single video
+Route::get('/video/{id}', [\App\Http\Controllers\Api\VideoController::class,'video'])->name('single');
+
 
 // Route Gallery  All // Gallery barchasi
 Route::get('/gallery', [\App\Http\Controllers\Api\GalleryController::class,'index'])->name('gallery');
@@ -65,3 +68,8 @@ Route::get('/notification/{id}', [\App\Http\Controllers\Api\NotificationControll
 
 // Route Word // Hikmatli sozlar
 Route::get('/word', [\App\Http\Controllers\Api\WordController::class,'index']);
+
+//route ads
+Route::get('ads/home',[\App\Http\Controllers\Api\AdsController::class,'index']);
+Route::get('ads/detail',[\App\Http\Controllers\Api\AdsController::class,'detail']);
+Route::get('ads/category',[\App\Http\Controllers\Api\AdsController::class,'category']);
